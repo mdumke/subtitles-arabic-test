@@ -40,13 +40,12 @@ class AudioPlayer extends Component {
   }
 
   fetchAudioFile (filename) {
-    console.log('fetching', filename)
     const xhr = new XMLHttpRequest()
 
     return new Promise((resolve, reject) => {
       xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
-          if (xhr.status === 200 && xhr.response.type === 'audio/x-m4a') {
+          if (xhr.status === 200 && xhr.response.type.match(/^audio/)) {
             resolve(xhr.response)
           } else {
             resolve(null)
