@@ -1,0 +1,50 @@
+{
+  "de": {
+    "a": "Es wird erzählt, dass ein junger Sultan den Thron bestieg:",
+    "b": "Einst war er ein Junge mit weitem Herzen gewesen.",
+    "c": "Doch das Schicksal suchte ihn heim und raubte ihm seine Eltern.",
+    "d": "Und so breiteten sich in der Seele des Jungen, wo vorher Liebe und Güte gewohnt hatten, Hass und Bitterkeit aus...",
+    "e": "Bruder! Ich hatte einen schrecklichen Traum! Ich träumte die Pest wütete in unserem Land.",
+    "f": "Unser guter Sultan und die Sultanin wollten den Menschen helfen –",
+    "g": "sie gingen zu den Kranken, um sie zu pflegen –",
+    "h": "doch sie steckten sich an und starben.",
+    "i": "Das war leider kein Traum, Schwester.",
+    "j": "Bruder, mir träumte, Prinz Sherban regierte als neuer Sultan",
+    "k": "doch aus Trauer über den Tod seiner Eltern verfiel er dem Wahnsinn.",
+    "l": "Mir träumte, die Pest sei besiegt,",
+    "m": "doch Friede gab es nicht, denn der Verlust seiner Mutter und seines Vaters wandelte die Güte des jungen Sultans in Hass.",
+    "n": "Jeden Tag ließ er einen seiner Untertanen hinrichten,"
+  },
+  "de-leicht": {
+    "a": "Ein junger Prinz wurde König",
+    "b": "Früher war er gut.",
+    "c": "Doch er verlor seine Eltern.",
+    "d": "Deshalb wurde der Junge böse.",
+    "e": "Bruder! Ich hatte einen schrecklichen Traum! Eine Krankheit befiel das ganze Land.",
+    "f": "Unser guter König und die Königin wollten den Menschen helfen",
+    "g": "sie pflegten die Kranken",
+    "h": "doch sie wurden auch krank und starben.",
+    "i": "Das war kein Traum, Schwester.",
+    "j": "Bruder. Ich träumte, Prinz Sherban ist jetzt König.",
+    "k": "Doch aus Trauer um seine Eltern wurde er verrückt.",
+    "l": "Ich träumte, die Krankheit sei vorbei.",
+    "m": "Doch es gab trotzdem keinen Frieden. Der junge König war wütend.",
+    "n": "Er tötete jeden Tag einen Menschen."
+  },
+  "ar": {
+    "a": "شاب اصبح ملكا",
+    "b": "سابقا كان سعيدا",
+    "c": "لكنه فقد اهله ووطنه",
+    "d": "لذلك اصح شريرا",
+    "e": "صاب البلد مرض عام - كان حلم مخيف - اخي",
+    "f": "ملكنا الرائع وزوجته يريدان ان يساعدا الجميع",
+    "g": "هم يعتنون بالمرضى",
+    "h": "لكن  هم  مرضو وماتوا",
+    "i": "هذا لم يكن حلم شقيقته",
+    "j": "هي حلمت ان شقيقها شيربان اصبح الملك",
+    "k": "هي حزنت  لفقد اهلها حد الجنون",
+    "l": "هي حلمت ان المرض انتهى",
+    "m": "لكن رغم ذلك كان لايوجد سلام والملك الجديد كان غاضبا جداا",
+    "n": "وكان يقتل شخصا كل يوم"
+  }
+}
