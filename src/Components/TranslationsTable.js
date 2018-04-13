@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { UP, DOWN } from '../constants'
+
 class TranslationsTable extends Component {
   constructor (props) {
     super(props)
@@ -15,6 +17,7 @@ class TranslationsTable extends Component {
     }
 
     this.handleRowClick = this.handleRowClick.bind(this)
+    this.handleKeyDown = this.handleKeyDown.bind(this)
   }
 
   componentDidMount () {
@@ -23,9 +26,19 @@ class TranslationsTable extends Component {
     })
   }
 
-  handleRowClick(e) {
+  handleRowClick (e) {
     const newPositon = Number(e.target.getAttribute('value'))
     this.props.updatePosition(newPositon)
+  }
+
+  handleKeyDown (e) {
+    if (e.key === 'ArrowDown' || e.key === 'j') {
+      this.props.navigate(DOWN)
+    }
+
+    if (e.key === 'ArrowUp' || e.key === 'k') {
+      this.props.navigate(UP)
+    }
   }
 
   renderCell (id, locale, rowIndex) {
@@ -52,9 +65,11 @@ class TranslationsTable extends Component {
 
       return (
         <tr
+          tabIndex='-1'
           key={subtitleId}
           className={`${highlight ? 'alert-info' : ''}`}
           onClick={this.handleRowClick}
+          onKeyDown={this.handleKeyDown}
           >
           {
             this.locales.map(locale =>
