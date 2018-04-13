@@ -32,11 +32,11 @@ class TranslationsTable extends Component {
   }
 
   handleKeyDown (e) {
-    if (e.key === 'ArrowDown' || e.key === 'j') {
+    if (e.key === 'ArrowDown') {
       this.props.navigate(DOWN)
     }
 
-    if (e.key === 'ArrowUp' || e.key === 'k') {
+    if (e.key === 'ArrowUp') {
       this.props.navigate(UP)
     }
   }

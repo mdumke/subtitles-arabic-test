@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import TranslationsTable from './TranslationsTable'
+import AudioPlayer from './AudioPlayer'
 import { UP, DOWN } from '../constants'
 
 class Subito extends Component {
@@ -9,17 +10,23 @@ class Subito extends Component {
 
     this.state = {
       currentPosition: null,
-      subtitleIds: 'abcdefghijklmn'.split('')
+      subtitleIds: '1,2,3,4,5,6,7,8,9,10,11,12,13,14'.split(',')
     }
 
     this.updatePosition = this.updatePosition.bind(this)
     this.navigate = this.navigate.bind(this)
   }
 
+  playAudio () {
+    const id = this.state.subtitleIds[this.state.currentPosition]
+
+    this.refs.audioPlayer.play(id)
+  }
+
   updatePosition (newPosition) {
     this.setState({
       currentPosition: newPosition
-    })
+    }, this.playAudio)
   }
 
   navigate (direction) {
@@ -43,6 +50,7 @@ class Subito extends Component {
           updatePosition={this.updatePosition}
           navigate={this.navigate}
         />
+        <AudioPlayer ref='audioPlayer'/>
       </div>
     )
   }
