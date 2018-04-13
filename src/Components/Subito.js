@@ -8,8 +8,16 @@ class Subito extends Component {
 
     this.state = {
       currentPosition: null,
-      subtitleIds: 'abcdefghijkl'.split('')
+      subtitleIds: 'abcdefghijklmn'.split('')
     }
+
+    this.updatePosition = this.updatePosition.bind(this)
+  }
+
+  updatePosition (newPosition) {
+    this.setState({
+      currentPosition: newPosition
+    })
   }
 
   render () {
@@ -18,6 +26,7 @@ class Subito extends Component {
         <TranslationsTable
           subtitleIds={this.state.subtitleIds}
           currentPosition={this.state.currentPosition}
+          updatePosition={this.updatePosition}
         />
       </div>
     )
