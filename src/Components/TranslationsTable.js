@@ -85,9 +85,15 @@ class TranslationsTable extends Component {
       <table className='table'>
         <thead>
           <tr>
-            <th className='text-center' style={{width: '33%'}}>Deutsch (original)</th>
-            <th className='text-center' style={{width: '33%'}}>Deutsch (leicht)</th>
-            <th className='text-center'>Arabisch</th>
+            <th className='text-center' style={{width: '33%', borderTop: 'none'}}>
+              Deutsch (original)
+            </th>
+            <th className='text-center' style={{width: '33%', borderTop: 'none'}}>
+              Deutsch (leicht)
+            </th>
+            <th className='text-center' style={{borderTop: 'none'}}>
+              Arabisch
+            </th>
           </tr>
         </thead>
         <tbody>

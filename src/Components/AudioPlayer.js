@@ -6,29 +6,39 @@ class AudioPlayer extends Component {
   constructor (props) {
     super(props)
 
-    this.audioLookup = {}
+    this.audioLookup = {
+      arabisch: {},
+      'leichte-sprache': {}
+    }
     this.currentAudio = null
     this.filenames = '1,2,3,4,5,6,7,8,9,10,11,12,13,14'.split(',')
   }
 
   componentDidMount () {
-    this.tracks = this.fetchAudioFiles()
+    this.fetchAudioFiles('arabisch')
+    this.fetchAudioFiles('leichte-sprache')
   }
 
-  fetchAudioFiles () {
+  shouldComponentUpdate (nextProps) {
+    return this.props.lang !== nextProps.lang
+  }
+
+  fetchAudioFiles (lang) {
     this.filenames.map(filename => {
-      return this.fetchAudioFile(`./audio/${filename}.m4a`)
+      const filepath = `./audio/${lang}/${filename}.m4a`
+
+      return this.fetchAudioFile(filepath)
         .then(blob => {
           if (blob) return new Audio(URL.createObjectURL(blob))
         })
         .then(audio => {
-          return this.audioLookup[filename] = audio
+          this.audioLookup[lang][filename] = audio
         })
       })
   }
 
   play (subtitleId) {
-    const audio = this.audioLookup[subtitleId]
+    const audio = this.audioLookup[this.props.lang][subtitleId]
 
     if (!audio) return
 
