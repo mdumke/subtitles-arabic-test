@@ -7,7 +7,7 @@ import React from 'react'
 
 const langNames = {
   arabisch: 'Arabisch',
-  'leichte-sprache': 'Deutch (leicht)'
+  'leichte-sprache': 'Deutsch (leicht)'
 }
 
 const style = {
@@ -25,12 +25,15 @@ const LanguagePicker = props => (
           <input
             className='form-check-input'
             type='radio'
+            id={`lang-${lang}`}
             name='inlineRadioOptions'
             defaultChecked={props.currentAudioVersion === lang}
             onClick={props.onLangPick}
             value={lang} />
 
-          <label className='form-check-label'>
+          <label
+            htmlFor={`lang-${lang}`}
+            className='form-check-label'>
             { langNames[lang] }
           </label>
         </div>
